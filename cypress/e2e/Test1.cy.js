@@ -43,6 +43,14 @@ cy.get('.brand').then((logoelement) => {
     cy.log(logoelement.text());
 });
 
+//this checs both first prints then asserts******
+// cy.get('.brand').then((logoelement) => {
+//     const actualText = logoelement.text();
+//     cy.log(actualText); // Log the actual text
+//     return actualText; // Return the text for the next chained command
+// }).should('eq', 'GREENKART'); // Assert the text value
+
+
 //const logo=cy.get('.brand')
 //cy.log(cy.get('.brand').text())
 // cy.log(logo.text())
