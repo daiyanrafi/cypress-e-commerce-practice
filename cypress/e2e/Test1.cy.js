@@ -33,12 +33,16 @@ cy.wrap($el).find('button').click()
 //assert if logo text is correctly displayed
 cy.get('.brand').should('have.text','GREENKART')
 
-//this is to print in logs
-cy.get('.brand').then(function(logoelement)
-{
-    cy.log(logoelement.text())
+//this is to print in logs***
+// cy.get('.brand').then(function(logoelement)
+// {
+//     cy.log(logoelement.text())
+// })
 
-})
+cy.get('.brand').then((logoelement) => {
+    cy.log(logoelement.text());
+});
+
 //const logo=cy.get('.brand')
 //cy.log(cy.get('.brand').text())
 // cy.log(logo.text())
