@@ -10,7 +10,7 @@ describe('My Second Test Suite', function () {
         cy.wait(2000)
 
         //Parent child chaining
-        cy.get('.products').as('productLocator')
+        cy.get('.products').as('productLocator') // alias created lie sql
         cy.get('@productLocator').find('.product').each(($el, index, $list) => {
 
             const textVeg = $el.find('h4.product-name').text()
